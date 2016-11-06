@@ -3,11 +3,6 @@
 
 Vagrant.configure("2") do |config|
 
-$script = <<SCRIPT
-echo I am provisioning...
-date > /etc/vagrant_provisioned_at
-SCRIPT
-
   config.vm.define "lbl" do |lbl| 
     lbl.vm.box = "ubuntu/trusty64"
     lbl.vm.provision "shell", path: "provision.sh"
