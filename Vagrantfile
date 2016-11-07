@@ -15,12 +15,12 @@ Vagrant.configure("2") do |config|
     srv.vm.network :private_network, ip: '192.168.42.2'
   end
 
-  config.vm.define "web1" do |srv| 
+  config.vm.define "app01" do |srv| 
     srv.vm.hostname = 'web1.masteringansible'
     srv.vm.network :private_network, ip: '192.168.42.3'
   end
 
-  config.vm.define "web2" do |srv| 
+  config.vm.define "app02" do |srv| 
     srv.vm.hostname = 'web2.masteringansible'
     srv.vm.network :private_network, ip: '192.168.42.4'
   end
